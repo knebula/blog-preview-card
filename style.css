@@ -1,0 +1,148 @@
+:root {
+  --clr-primary-400: hsl(47, 88%, 63%);
+
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-400: hsl(0, 0%, 50%);
+  --clr-neutral-900: hsl(0, 0%, 7%);
+
+  --fw-regular: 500;
+  --fw-bold: 800;
+
+  --ff-base: "Figtree", sans-serif;
+}
+
+/* RESET */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* GENERAL STYLING */
+body {
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  color: var(--clr-neutral-900);
+  background-color: var(--clr-primary-400);
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  padding: 1rem;
+}
+
+/* BLOG CARD STYLING */
+.blog {
+  background-color: var(--clr-neutral-100);
+  max-width: 375px;
+  padding: 1rem;
+  border: 0.075rem solid var(--clr-neutral-900);
+  border-radius: 1.25rem;
+  box-shadow: 0.5rem 0.5rem 0 var(--clr-neutral-900);
+}
+
+.blog > img {
+  margin: auto;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.blog-category {
+  background-color: var(--clr-primary-400);
+  display: inline-block;
+  font-weight: var(--fw-bold);
+  font-size: 0.75rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog p.blog-date {
+  font-size: 0.65rem;
+  color: var(--clr-neutral-900);
+  margin-bottom: 0;
+}
+.blog-title {
+  margin-bottom: 0.5rem;
+}
+
+.blog-title > a {
+  text-decoration: none;
+  color: var(--clr-neutral-900);
+  font-weight: var(--fw-bold);
+  font-size: 1.2rem;
+}
+
+.blog-title > a:hover {
+  color: var(--clr-primary-400);
+}
+
+.blog > p {
+  color: var(--clr-neutral-400);
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.flex-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.flex-group > p {
+  font-weight: var(--fw-bold);
+  font-size: 0.75rem;
+}
+
+.avatar {
+  width: 1.75rem;
+}
